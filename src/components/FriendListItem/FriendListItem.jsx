@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import css from './FriendListItem.module.css';
 
-export const FriendsListItem = ({ avatar, name, isOnline }) => {
+export const FriendsListItem = ({ friend }) => {
+  const { avatar, name, isOnline } = friend;
   const statusClasses = [css.status];
 
   if (isOnline) {
@@ -17,7 +18,10 @@ export const FriendsListItem = ({ avatar, name, isOnline }) => {
 };
 
 FriendsListItem.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
+  friend: PropTypes.exact({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
 };

@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './ProfileDescr.module.css';
 
-export const ProfileDescr = ({ user }) => {
-  const { username, tag, location, avatar } = user;
+export const ProfileDescr = ({ username, tag, location, avatar }) => {
   return (
     <div className={css.description}>
       <img src={avatar} alt="User avatar" className={css.avatar} />
@@ -14,11 +13,8 @@ export const ProfileDescr = ({ user }) => {
 };
 
 ProfileDescr.propTypes = {
-  user: PropTypes.exact({
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.object,
-  }).isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
 };
