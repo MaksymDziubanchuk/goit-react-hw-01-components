@@ -1,0 +1,13 @@
+.item {
+  color: rgb(121, 121, 121);
+  background-color: white;
+}
+
+.item:nth-child(even) {
+  background-color: rgb(239, 250, 255);
+}
+
+.value {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

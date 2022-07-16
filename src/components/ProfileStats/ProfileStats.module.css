@@ -1,0 +1,33 @@
+.stats {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+}
+
+.item {
+  display: flex;
+  box-sizing: border-box;
+  width: 166.7px;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  background-color: rgb(215, 236, 236);
+}
+
+.label {
+  display: flex;
+  color: rgb(163, 161, 161);
+  margin-bottom: 5px;
+}
+.quantity {
+  display: flex;
+  font-weight: bold;
+  color: black;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid rgb(192, 192, 192);
+}

@@ -4,15 +4,15 @@ import css from './ProfileStats.module.css';
 export const ProfileStats = ({ stats }) => {
   return (
     <ul className={css.stats}>
-      <li>
+      <li className={css.item}>
         <span className={css.label}>Followers</span>
         <span className={css.quantity}>{stats.followers}</span>
       </li>
-      <li>
+      <li className={css.item}>
         <span className={css.label}>Views</span>
         <span className={css.quantity}>{stats.views}</span>
       </li>
-      <li>
+      <li className={css.item}>
         <span className={css.label}>Likes</span>
         <span className={css.quantity}>{stats.likes}</span>
       </li>

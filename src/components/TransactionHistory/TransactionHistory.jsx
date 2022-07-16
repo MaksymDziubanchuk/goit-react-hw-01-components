@@ -7,14 +7,14 @@ export const TransactionHistory = ({ items }) => {
     <>
       <table className={css.transaction_history}>
         <thead>
-          <tr>
+          <tr className={css.colums}>
             <th>Type</th>
             <th>Amount</th>
             <th>Currency</th>
           </tr>
         </thead>
 
-        <tbody>
+        <tbody className={css.items}>
           {items.map(item => (
             <TransactionHistoryItem
               key={item.id}
